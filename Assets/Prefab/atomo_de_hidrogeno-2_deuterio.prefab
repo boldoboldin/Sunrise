@@ -112,7 +112,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1181632037771140791}
-  - {fileID: 1382115866314713051}
   - {fileID: 7554574676318806846}
   - {fileID: 4084675357496328931}
   m_Father: {fileID: 7960084968877714582}
@@ -325,6 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4084675357496328931}
+  - component: {fileID: 6305139593359879010}
   m_Layer: 0
   m_Name: Toroide
   m_TagString: Untagged
@@ -345,9 +345,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5179713948564439830}
+  - {fileID: 1382115866314713051}
   m_Father: {fileID: 8302191589757301395}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6305139593359879010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4434603413130052058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a1f74cfaf6bd14c9dd3085e7bf3606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4777566667104477021
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +423,7 @@ Transform:
   m_Children:
   - {fileID: 4839799526239136408}
   m_Father: {fileID: 8302191589757301395}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8880108279072011910
 GameObject:
@@ -435,13 +448,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8880108279072011910}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 767.9179, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3224828469699011591}
-  m_Father: {fileID: 8302191589757301395}
+  m_Father: {fileID: 4084675357496328931}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8919285262597848073
@@ -492,7 +505,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a66ce12ab525d5d4797e0187de5e88fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 0.05
+  vibration: 0.05
+  velVar: 0.005
 --- !u!114 &8587912533012454633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,7 +535,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 88
   m_CollisionDetection: 0
 --- !u!135 &-6736251300913794496
 SphereCollider:
