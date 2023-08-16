@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3426836552174439153}
   - component: {fileID: 6900927871694915031}
+  - component: {fileID: 665118179395223731}
   - component: {fileID: 7679533884765953902}
   - component: {fileID: 7731772744437073398}
   m_Layer: 0
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2649595547398099019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47,7 +48,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a66ce12ab525d5d4797e0187de5e88fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 0.2
+  vel: 0.05
+--- !u!114 &665118179395223731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2649595547398099019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbb71ab91f930645ac9262386f0788f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  H2Atom: {fileID: 8919285262597848073, guid: c7260dadeec182f42aced971eab674db, type: 3}
+  lifeTime: 0
 --- !u!54 &7679533884765953902
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -75,7 +90,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 782.99
+  m_Radius: 500
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4151204159710195306
 GameObject:
