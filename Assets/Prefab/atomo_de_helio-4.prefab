@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vibration: 0.05
-  velVar: 0.005
+  velVar: 0.0025
 --- !u!1 &4112653351058858453
 GameObject:
   m_ObjectHideFlags: 0
