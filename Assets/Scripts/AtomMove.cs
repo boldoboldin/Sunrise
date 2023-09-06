@@ -9,6 +9,8 @@ public class AtomMove : MonoBehaviour
     [SerializeField] private float velVar;
     private float velX;
     private float velY;
+    private float velZ;
+
 
 
 
@@ -19,11 +21,13 @@ public class AtomMove : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         velX = Random.Range(-velVar, velVar);
         velY = Random.Range(-velVar, velVar);
+        velZ = Random.Range(-velVar, velVar);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3((transform.position.x + velX + Random.Range(-vibration, vibration)), (transform.position.y + velY + Random.Range(-vibration, vibration)), transform.position.z);
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x + velX * Time.deltaTime, transform.localEulerAngles.y + velY * Time.deltaTime, transform.localEulerAngles.z + velZ * Time.deltaTime);
+        transform.position = new Vector3((transform.position.x + velX + Random.Range(-vibration, vibration)), (transform.position.y + velY + Random.Range(-vibration, vibration)), transform.position.z + velZ + Random.Range(-vibration, vibration));
     }
 }
